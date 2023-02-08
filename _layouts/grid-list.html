@@ -1,0 +1,32 @@
+---
+layout: main
+---
+
+<section>
+	<div class="list-wrapper">
+		{% for fundador in site.fundadores %}
+		<div class="list-element">
+			<div class="list-element-button">
+				<img src="{{ site.images_path }}{{ fundador.photo_path }}" alt="" />
+			</div>
+			<div class="modal-one-container hidden">
+				<div class="modal-one-content">
+					<div class="modal-photo-container">
+						<img src="{{ site.images_path }}{{ fundador.photo_path }}" alt="" />
+					</div>
+					<div class="modal-nav-container">
+						<div class="modal-nav-title">
+							<h4>{{ fundador.name }}</h4>
+						</div>
+						<div class="modal-nav-links">
+							<a href="{{ fundador.video_url }}" target="_blank">video</a>
+							<a href="fundadores/{{ fundador.slug }}.html">more</a>
+						</div>
+					</div>
+					{% include modal-closing-button.html %}
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
