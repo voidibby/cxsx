@@ -35,12 +35,21 @@ collections:
         permalink: "/fundadores/:slug"
         output: true
 
+    eventos:
+        permalink: "/eventos/:slug"
+        output: true
+
 defaults:
     - scope:
           path: ""
           type: "fundadores"
       values:
           layout: "fundadores"
+    - scope:
+          path: ""
+          type: "eventos"
+      values:
+          layout: "eventos"
 # Build settings
 
 # Exclude from processing.

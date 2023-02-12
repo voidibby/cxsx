@@ -1,0 +1,20 @@
+---
+layout: main
+---
+
+<section>
+	<div class="timeline-wrapper">
+		<div class="cursor"></div>
+		{% for evento in site.eventos %}
+		<div class="timeline-element timeline-element-temp">
+			<p style="display: none">{{ evento.year }}</p>
+			<!--The paragraph element must remain as the first children-->
+			<a href="eventos/{{ evento.slug }}.html" class="timeline-element-link"></a>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="timeline-year-tag">
+		<p>1995</p>
+	</div>
+</section>
+<script src="{{ site.baseurl }}/assets/timeline.js" defer></script>
