@@ -1,0 +1,14 @@
+---
+layout: main
+---
+
+<article>
+	<div class="article-content-wrapper">
+		<h2 class="article-title">{{ page.title }}</h2>
+		<h4 class="article-year">{{ page.year }}</h4>
+		<div class="article-image-container">
+			<img src="{{ site.images_path }}{{ page.photo_path }}" alt="" />
+		</div>
+		<div class="article-content-container">{{ content | markdownify }}</div>
+	</div>
+</article>
